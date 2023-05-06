@@ -1,0 +1,90 @@
+.wrapper {
+   display: flex; 
+   align-items: center;
+   input[type='checkbox'] {
+       position: absolute;
+       clip: rect(0 0 0 0); 
+       clip-path: inset(50%);
+       height: 1px;
+       overflow: hidden;
+       white-space: nowrap;
+       width: 1px;
+   }
+   .checkbox {
+       position: relative; 
+       display: inline-block;
+       height: 19px;
+       width: 19px;
+       border: 1px solid  #4E148C;
+       border-radius: 50%;
+       margin-right: 20px;
+       background-color: transparent;
+       cursor: pointer;
+   }
+   .active {
+        position: relative;
+        display: inline-block;
+        height: 19px;
+        width: 19px;
+        background-color: transparent;
+        border: 1px solid  #4E148C;
+        margin-right: 20px;
+        border-radius: 50%;
+        cursor: pointer;
+        &::after {
+            position: absolute;
+            content: '';
+            top: 2px;
+            left: 2px;
+            width: 15px;
+            height: 15px;
+            background-color: #4E148C;
+            border-radius: 50%;
+        }
+
+    }
+    .text {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        color: #858ae3;
+        cursor: pointer;
+    }
+    .activeText {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        color: #8700b8;
+        cursor: pointer;
+    }
+    @media (max-width: 1000px) {
+        .checkbox {
+            border: 1px solid white;
+        }
+        .active {
+            border: 1px solid white;
+            &::after {
+                position: absolute;
+                content: '';
+                width: 15px;
+                height: 15px;
+                background-color: #fff;
+                border-radius: 50%;
+                top: 2px;
+                left: 2px;
+            }
+        }
+        .text {
+            color: white;
+            &:hover {
+                transition: none;
+                color: white;
+            }
+        }
+        .activeText {
+            color: white;
+        }
+    }
+} 

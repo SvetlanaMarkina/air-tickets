@@ -1,0 +1,78 @@
+.app {
+    .container {
+        max-width: 1050px;
+        margin: 0 auto;
+        padding: 0 15px;
+        .header {
+            margin-top: 80px;
+            margin-bottom: 20px;
+            .logo {
+                display: flex;
+                align-items: center;
+                text-decoration: none;
+                span {
+                    font-family: 'Inter', sans-serif;
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 24px;
+                    line-height: 29px;
+                    color: #4E148C;
+                    margin-left: 34px;
+                }
+            }
+            @media (max-width: 760px) {
+                .logo {
+                    justify-content: center;
+                    span {
+                        display: none;
+                    }
+                    img {
+                        width: 57px;
+                        height: 46px;
+                    }
+                }
+                
+            }
+        }
+        .main {
+            .ticketsBlock {
+                display: grid;
+                grid-template-areas:
+                    'filters sorter sorter'
+                    'filters tickets tickets'
+                    'filters button button';
+                align-items: start;   
+                .tickets {
+                    grid-area: tickets;
+                    margin-top: 20px;
+                    padding: 0;
+                    margin: 0;
+                }
+                .lazyBtn {
+                    grid-area: button;
+                    font-family: 'Inter';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 24px;
+                    line-height: 29px;
+                    color: #F7F9F7;
+                    background-color: #4E148C;
+                    border-radius: 10px;
+                    width: 100%;
+                    padding: 16px 0;
+                    cursor: pointer;
+                    margin-top: 70px;
+                    border: none;
+                    outline: none;
+                }
+                @media (max-width: 1000px) {
+                    grid-template-areas:
+                        'sorter'
+                        'filters'
+                        'tickets'
+                        'button';
+                }
+            }
+        }
+    }
+}

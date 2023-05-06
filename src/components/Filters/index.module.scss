@@ -1,0 +1,91 @@
+.filters {
+    max-width: 275px;  
+    grid-area: filters;  
+    .filterDrop {
+        display: none;
+    }
+    .filtersList {
+        .filter {
+            background-color: #e8ebf2;
+            border-radius: 10px; 
+            padding: 19px 18px 48px 19px;
+            margin-bottom: 47px; 
+            &:last-child {
+                margin-bottom: 0;
+            }
+            .title {
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 24px;
+                color: #4E148C;
+            }
+            .сheckboxes {
+                padding: 0;
+                margin: 0;
+                margin-left: 25px;
+                margin-top: 27px;
+                margin-left: 25px; 
+                li {
+                    list-style: none;
+                    margin-bottom: 21px;
+                    &:last-child {
+                        margin: 0;
+                    }
+                } 
+            }
+        }
+    }
+    @media (max-width: 1000px) {
+        max-width: 100%;
+        margin-top: 10px;
+        .filterDrop {
+            display: flex;
+            justify-content: space-between;
+            padding: 13px 23px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            background-color: #4E148C;
+            cursor: pointer;
+            span {
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 19px;
+                color:  #F7F9F7;
+            }
+        }
+        .filtersListHide {
+            display: none;
+        }
+        .filtersList {
+            display: flex;
+            background-color: #4E148C;
+            max-width: 100%;
+            padding-right: 28px;
+            padding-left: 28px;
+            padding-bottom: 42px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            .filter {
+                padding: 0;
+                margin: 0;
+                border-radius: 0;
+                background-color: transparent;
+                .title {
+                    color: white;
+                    margin-bottom: 13px;
+                }
+                .сheckboxes {
+                    margin: 0;
+                }
+                &:first-child {
+                    margin-right: 65px;
+                }
+            }
+        }
+    }
+
+}    
